@@ -39,3 +39,65 @@ console.log(hwanInfo.age);
 console.log(hwanInfo.favFood);
 console.log(hwanInfo.favFood[1]);
 console.log(hwanInfo.favFood[1].name); */
+
+//first Function
+
+/* function sayHello(one, two) {
+  console.log("hi", one, "nice to meet you", "i'm", two, "years old.");
+}
+sayHello("hwan", 35); */
+
+/* function sayHello(name, age) {
+  console.log(`hi ${name}. my age is ${age} old years`);
+}
+const greetYujin = sayHello("yujin", 24);
+console.log(greetYujin);  //undefined */
+
+/* function sayHello(name, age) {
+  return `hi ${name}. my age is ${age} old years`;
+}
+const greetYujin = sayHello("yujin", 24);
+console.log(greetYujin); */
+
+/* const calculator = {
+  plus: function (a, b) {
+    return a + b;
+  },
+  minus: function (a, b) {
+    return a - b;
+  },
+  multiplication: function (a, b) {
+    return a * b;
+  },
+  divide: function (a, b) {
+    return a / b;
+  },
+  square: function (a) {
+    return a * a;
+  },
+  pow: function (a, b) {
+    return a ** b;
+  },
+};
+
+//onsole.log(calculator.plus(4, 4));
+const one = calculator.plus(4, 4);
+console.log(one);
+const two = calculator.minus(5, 2);
+console.log(two);
+const three = calculator.multiplication(3, 3);
+console.log(three);
+const four = calculator.divide(4, 2);
+console.log(four);
+const five = calculator.square(7);
+console.log(five);
+const six = calculator.pow(10, 2);
+console.log(six); */
+
+// const title = document.getElementById("title");
+const title = document.querySelector("#title");
+title.innerHTML = "hi";
+title.style.color = "pink";
+console.dir(title);
+console.dir(document);
+document.title = "Everything";
