@@ -101,3 +101,15 @@ title.style.color = "pink";
 console.dir(title);
 console.dir(document);
 document.title = "Everything";
+
+/* function handlerResize() {
+  console.log("i have been resized");
+}
+
+// window.addEventListener("resize", handlerResize);  //화면사이즈 바뀔때 발생하는 이벤트 resize */
+
+function handleClick() {
+  title.style.color = "green";
+}
+
+title.addEventListener("click", handleClick);
