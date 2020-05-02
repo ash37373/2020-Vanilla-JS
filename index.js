@@ -95,21 +95,43 @@ const six = calculator.pow(10, 2);
 console.log(six); */
 
 // const title = document.getElementById("title");
+// const title = document.querySelector("#title");
+// title.innerHTML = "hi";
+// title.style.color = "pink";
+// console.dir(title);
+// console.dir(document);
+// document.title = "Everything";
+
+// /* function handlerResize() {
+//   console.log("i have been resized");
+// }
+
+// // window.addEventListener("resize", handlerResize);  //화면사이즈 바뀔때 발생하는 이벤트 resize */
+
+// function handleClick() {
+//   title.style.color = "green";
+// }
+
+// title.addEventListener("click", handleClick);
+
+//마우스 클릭할때 색 바꾸기
 const title = document.querySelector("#title");
-title.innerHTML = "hi";
-title.style.color = "pink";
-console.dir(title);
-console.dir(document);
-document.title = "Everything";
 
-/* function handlerResize() {
-  console.log("i have been resized");
-}
+const BASE_COLOR = "blue";
+const OTHER_COLOR = "#7f8c7d";
 
-// window.addEventListener("resize", handlerResize);  //화면사이즈 바뀔때 발생하는 이벤트 resize */
+const handleClick = function () {
+  const currentColor = title.style.color;
+  if (currentColor === BASE_COLOR) {
+    title.style.color = OTHER_COLOR;
+  } else {
+    this.style.color = BASE_COLOR;
+  }
+};
 
-function handleClick() {
-  title.style.color = "green";
-}
+const init = function () {
+  title.style.color = BASE_COLOR;
+  title.addEventListener("click", handleClick);
+};
 
-title.addEventListener("click", handleClick);
+init();
