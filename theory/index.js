@@ -115,22 +115,41 @@ console.log(six); */
 // title.addEventListener("click", handleClick);
 
 //마우스 클릭할때 색 바꾸기
+// const title = document.querySelector("#title");
+
+// const BASE_COLOR = "blue";
+// const OTHER_COLOR = "#7f8c7d";
+
+// const handleClick = function () {
+//   const currentColor = title.style.color;
+//   if (currentColor === BASE_COLOR) {
+//     title.style.color = OTHER_COLOR;
+//   } else {
+//     this.style.color = BASE_COLOR;
+//   }
+// };
+
+// const init = function () {
+//   title.style.color = BASE_COLOR;
+//   title.addEventListener("click", handleClick);
+// };
+
+// init();
+
 const title = document.querySelector("#title");
 
-const BASE_COLOR = "blue";
-const OTHER_COLOR = "#7f8c7d";
+const CLICKED_CLASS = "clicked";
 
-const handleClick = function () {
-  const currentColor = title.style.color;
-  if (currentColor === BASE_COLOR) {
-    title.style.color = OTHER_COLOR;
+function handleClick() {
+  const hasClass = title.classList.contains(CLICKED_CLASS);
+  if (hasClass) {
+    title.classList.remove(CLICKED_CLASS);
   } else {
-    this.style.color = BASE_COLOR;
+    title.classList.add(CLICKED_CLASS);
   }
-};
+}
 
 const init = function () {
-  title.style.color = BASE_COLOR;
   title.addEventListener("click", handleClick);
 };
 
